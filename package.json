@@ -1,0 +1,32 @@
+{
+  "name": "mcfb-project",
+  "version": "1.0.0",
+  "description": "This is the Tech for Social Good project for the Merced County Food Bank. ",
+  "main": "serverInit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingkirpal2000/MCFB-Project.git"
+  },
+  "keywords": [
+    "mcfb",
+    "foodReserve",
+    "Tech",
+    "for",
+    "social",
+    "good",
+    "helpers",
+    "spot"
+  ],
+  "author": "Sabir Kirpal, Linda Garcia, Harjot Grewal, Sarah Padilla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kingkirpal2000/MCFB-Project/issues"
+  },
+  "homepage": "https://github.com/kingkirpal2000/MCFB-Project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
