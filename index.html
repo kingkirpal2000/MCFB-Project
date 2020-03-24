@@ -4,6 +4,7 @@
 <title>Food Reserve</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style/stylesheet.css">
 <style>
 
 /* Style the body */
@@ -32,12 +33,32 @@ body {
   <p>We store Merced's Food Bank Inventory here!</p>
 </div>
 
-<div class="content">
-  <h1>Login Below to Being Storing Inventory!</h1>
-  <p>Some content blablabla, some content blablabla.</p>
-  <p>Some content blablabla, some content blablabla.</p>
-  <p>Some content blablabla, some content blablabla.</p>
-</div>
+
+<h2> <center> Login Form </center> </h2>
+
+<form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="Helpersspot.png" class="Helpersspot">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <a href= "/"> <button type="button" class="cancelbtn">Cancel</button> <a/>
+    <a href="resetaccount.html"> <span class="psw">Forgot password?</span> </a>
+  </div>
+</form>
 
 </body>
 </html>
