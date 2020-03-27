@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/kingkirpal2000/MCFB-Project#readme",
   "dependencies": {
+    "crypt": "0.0.2",
     "ejs": "^3.0.1",
     "express": "^4.17.1"
   },
