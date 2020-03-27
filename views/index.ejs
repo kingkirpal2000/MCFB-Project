@@ -11,8 +11,9 @@
 body {
   font-family: Times;
   margin: 0;
-}
 
+}
+* {box-sizing: border-box;}
 /* Header/Logo Title */
 .header {
   padding: 60px;
@@ -24,6 +25,46 @@ body {
 
 /* Page Content */
 .content {padding:20px;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #1abc9c;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid #1abc9c;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #1abc9c;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
 </style>
 </head>
 <body>
@@ -33,21 +74,26 @@ body {
   <p>We store Merced's Food Bank Inventory here!</p>
 </div>
 
-<form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-    <img src="Helpersspot.png" class="Helpersspot">
+<h1><center> Login </center></h1>
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
   </div>
 
-  <div class="container">
-    <button id='login'>Login!</button>
-    <button id='register'>Register!</button>
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
   </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <a href= "/"> <button type="button" class="cancelbtn">Cancel</button> </a>
-    <a href="resetaccount.html"> <span class="psw">Forgot password?</span> </a>
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="psw">
   </div>
+
+  <button type="submit" class="btn">Register</button>
 </form>
+
 
 </body>
 </html>
