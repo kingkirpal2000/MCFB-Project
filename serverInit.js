@@ -1,58 +1,34 @@
 const express = require("express")
-const {MongoClient} = require('mongodb');
+const html = require("html")
+const MongoClient = require("mongodb").MongoClient
+const bodyParser = require("body-parser")
 const path = require("path")
 const server = express()
 
 
-async function main(){
-    /**
-     * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-     * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-     */
-    const uri = "mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority";
- 
-
-    const client = new MongoClient(uri);
- 
-    try {
-        // Connect to the MongoDB cluster
-        await client.connect();
- 
-        // Make the appropriate DB calls
-        await  listDatabases(client);
- 
-    } catch (e) {
-        console.error(e);
-    } finally {
-        await client.close();
-    }
-}
-
-main().catch(console.error);
-
-server.set("view-engine", "ejs")  //using the ejs view engine
 server.use(express.urlencoded({  extended: false  }))
+server.use(bodyParser.urlencoded({extended: true}))
+
+
+//MongoClient.connect('', (err, database) =>{
+
+
+//})
+
 
 //Routing
 server.get('/', (req, res) => {
-    res.render('index.ejs')
+    res.sendFile(__dirname + "/index.html")
 });
 
-server.get('/login', (req, res) => {
-    res.render('login.ejs')
-})
 
-server.get('/register', (req,res) => {
-    res.render('register.ejs')
-})
-
-
-//Why use post requests?
 server.post('/login', (req, res) =>{
-    req.body.username  //This is where I stopped: 10:42 Node.js Passport Login System tutorial
-                        //the "username" correspondes to the name field in an html tag
+    req.body.username  
 })
 
+server.post("/loginAttempt", (req, res) =>{
+    console.log(req.body)
+})
 
 //Tells us what port this server is on
 server.listen(3000, () => {
